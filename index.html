@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Home</title>
+</head>
+
+<body onload="show();">
+    <div class="box">
+        <div style="display: flex; margin-right: 15px; align-items: center; flex-direction: column;">
+        <h1 style="margin-bottom: 30px; color: bisque; font-style: italic; text-decoration: underline; text-decoration-style: dashed;" id="time_location1">India</h1>
+        <div id="time2"></div><span id="str1"></span></div>
+        <div style="display: flex; margin-right: 15px; align-items: center; flex-direction: column;">
+        <h1 style="margin-bottom: 30px; color: bisque; font-style: italic; text-decoration: underline; text-decoration-style: dashed;" id="time_location"></h1>
+        <div id="time21"></div><span id="str2"></span></div>
+        <div class="mbox">
+            <div class="box1">
+                <div id="set_alarm">Set Alarm</div>
+                <div id="stopwatch">Stop Watch</div>
+                <div id="colors">Change Color</div>
+            </div>
+            <div class="box2">
+                <div id="custom_time">CountDown Timer</div>
+                <div id="time_by_country">Set TimeZone</div>
+            </div>
+        </div>
+    </div>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>Set Alarm</h2>
+            </div>
+            <div class="modal-body">
+                <h3 style="margin-bottom: 10px;">Pick Time Below</h3>
+                <input class="hm" type="number" value="12" min="1" max="12" name="hour" id="hour">
+                <input class="hm" type="number" value="00" name="minute" min="00" max="59" id="minute">
+                <div style="display: inline-flex;"><input class="ap" type="radio" name="ampm" id="am"><label for="am"><h4>AM</h4></label></div>
+                <div style="display: inline-flex;"><input class="ap" type="radio" name="ampm" id="pm"><label for="pm"><h4>PM</h4></label></div>
+                <div style="margin: 10px 0px;"><button id="alarm-btn" class="alarm-btn">Set Alarm</button></div>
+                <div id="alarm-set" style="color: green; font-size: 1.2rem;"></div>
+            </div>
+        </div>
+    </div>
+    <!-- The Modal -->
+    <div id="myModal1" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>Stop Watch</h2>
+            </div>
+            <div class="modal-body">
+                <div style="font-size: 1.7rem;">Time: <span id="time1"></span></div>
+                <input class="stopinput" type="button" value="start" onclick="start();">
+                <input class="stopinput" type="button" value="stop" onclick="stop();">
+                <input class="stopinput" type="button" value="reset" onclick="reset()">
+            </div>
+        </div>
+    </div>
+    <div class="change_color">
+        <h2>Choose Color</h2>
+        <input type="color" name="c_color" id="c_color">
+        <button class="color-btn">Change Color</button>
+    </div>
+    <!-- The Modal -->
+    <div id="myModal2" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>Set CountDown Timer</h2>
+            </div>
+            <div class="modal-body">
+                <h3 style="margin-bottom: 10px;">Enter Time Below (HH/MM/SS)</h3>
+                <input type="number" class="set_time" name="set_hour" id="set_hour" min="0" max="23" value="00"> :
+                <input type="number" class="set_time" name="set_min" id="set_min" min="0" max="59" value="00"> :
+                <input type="number" class="set_time" name="set_sec" id="set_sec" min="0" max="59" value="00">
+                <div>
+                    <button id="set_time-btn" class="set_time-btn">Start CountDown</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- The Modal -->
+    <div id="myModal3" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>Set Custom Time</h2>
+            </div>
+            <div class="modal-body">
+                <h3 style="margin-bottom: 10px;">Choose TimeZone</h3>
+                <div class="tz_list">
+                    <input type="hidden" id="hid1" value=1>
+                    <div tabindex="1">India - UTC +5:30</div>
+                    <div tabindex="2">Pacific Time(US) - UTC -8:00</div>
+                    <div tabindex="3">Central Time(US) - UTC -6:00</div>
+                    <div tabindex="4">Brazil - UTC -3:00</div>
+                    <div tabindex="5">London(UK) - UTC 0:00</div>
+                    <div tabindex="6">Germany - UTC +1:00</div>
+                    <div tabindex="7">Russia - UTC +3:00</div>
+                    <div tabindex="8">Dubai - UTC +4:00</div>
+                    <div tabindex="9">Singapore - UTC +8:00</div>
+                    <div tabindex="10">China - UTC +8:00</div>
+                    <div tabindex="11">Japan - UTC +9:00</div>
+                    <div tabindex="12">Australia - UTC +11:00</div>
+                </div>
+                <div>
+                    <button class="set_timezone-btn">Set TimeZone</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+
+</html>

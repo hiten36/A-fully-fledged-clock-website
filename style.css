@@ -1,0 +1,354 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: url('bg.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 30%;
+    width: 50%;
+    border: 1px solid rgb(75, 255, 216);
+    border-radius: 30px;
+}
+
+#time2{
+    font-size: 4rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: rgb(170, 95, 214);
+    height: 100%;
+    width: 40%;
+    margin-bottom: 19px;
+}
+#str1{
+    color: white;
+    position: absolute;
+    top: 52.4%;
+    left: 42%;
+    font-size: 1.3rem;
+}
+#str2{
+    color: white;
+    position: absolute;
+    top: 52.4%;
+    left: 43%;
+    font-size: 1.3rem;
+}
+#time21{
+    font-size: 4rem;
+    display: none;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: rgb(170, 95, 214);
+    height: 100%;
+    width: 40%;
+    margin-bottom: 19px;
+}
+#set_alarm:hover{
+    cursor: pointer;
+    box-shadow: 0 0 11px rgba(255, 252, 252, 0.6); 
+    background-color: rgba(77, 158, 228, 0.315);
+}
+#set_alarm{
+    border: 1px dashed rgb(129, 255, 104);
+    color: yellow;
+    border-radius: 10px;
+    background-color: rgba(22, 132, 228, 0.315);
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    height: 5vh;
+    width: 8vw;
+    transition: box-shadow .3s;
+}
+#stopwatch:hover{
+    cursor: pointer;
+    box-shadow: 0 0 11px rgba(255, 252, 252, 0.6); 
+    background-color: rgba(77, 158, 228, 0.315);
+}
+#stopwatch{
+    border: 1px dashed rgb(129, 255, 104);
+    color: yellow;
+    border-radius: 10px;
+    background-color: rgba(22, 132, 228, 0.315);
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    height: 5vh;
+    width: 8vw;
+}
+#colors:hover{
+    cursor: pointer;
+    box-shadow: 0 0 11px rgba(255, 252, 252, 0.6); 
+    background-color: rgba(77, 158, 228, 0.315);
+}
+#colors{
+    border: 1px dashed rgb(129, 255, 104);
+    color: yellow;
+    border-radius: 10px;
+    background-color: rgba(22, 132, 228, 0.315);
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    height: 5vh;
+    width: 8vw;
+}
+#custom_time:hover{
+    cursor: pointer;
+    box-shadow: 0 0 11px rgba(255, 252, 252, 0.6); 
+    background-color: rgba(77, 158, 228, 0.315);
+}
+#custom_time{
+    border: 1px dashed rgb(129, 255, 104);
+    color: yellow;
+    border-radius: 10px;
+    background-color: rgba(22, 132, 228, 0.315);
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    height: 5vh;
+    width: 11vw;
+}
+#time_by_country:hover{
+    cursor: pointer;
+    box-shadow: 0 0 11px rgba(255, 252, 252, 0.6); 
+    background-color: rgba(77, 158, 228, 0.315);
+}
+#time_by_country{
+    border: 1px dashed rgb(129, 255, 104);
+    color: yellow;
+    border-radius: 10px;
+    background-color: rgba(22, 132, 228, 0.315);
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    height: 5vh;
+    width: 11vw;
+}
+.box1{
+    display: flex;
+    flex-direction: row;
+    margin: 15px 0px;
+    justify-content: center;
+    align-items: center;
+}
+.box2{
+    display: flex;
+    flex-direction: row;
+    margin: 15px 0px;
+    justify-content: center;
+    align-items: center;
+}
+.mbox{
+    display: flex;
+    flex-direction: column;
+}
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    margin-left: 25%;
+    text-align: center;
+    width: 50%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+/* Modal Content */
+.modal-content {
+position: relative;
+background-color: #fefefe;
+margin: auto;
+padding: 0;
+border: 1px solid #888;
+width: 80%;
+box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+-webkit-animation-name: animatetop;
+-webkit-animation-duration: 0.4s;
+animation-name: animatetop;
+animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+from {top:-300px; opacity:0} 
+to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+from {top:-300px; opacity:0}
+to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+color: white;
+float: right;
+font-size: 28px;
+font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+color: #000;
+text-decoration: none;
+cursor: pointer;
+}
+
+.modal-header {
+padding: 2px 16px;
+margin-bottom: 20px;
+color: black;
+background-color: paleturquoise;
+}
+
+.modal-body {padding: 2px 16px;margin-bottom: 10px;}
+.hm{
+    border: 2px solid green;
+    border-radius: 5px;
+    text-align: center;
+    height: 30px;
+    width: 13%;
+    margin: 2px 2px;
+    font-size: 1.3rem;
+}
+.alarm-btn{
+    padding: 5px 8px;
+    font-size: 1.1rem;
+    border: 1px solid rgb(155, 53, 42);
+    border-radius: 6px;
+    background-color: rgb(183, 247, 224);
+}
+.alarm-btn:hover{
+    cursor: pointer;
+    background-color: rgb(211, 247, 234);
+    border: 1px solid black;
+}
+.stopinput{
+    font-size: 1.3rem;
+    padding: 4px 9px;
+    margin: 10px 2px;
+    background-color: rgb(253, 205, 239);
+    border: 1px solid blueviolet;
+    border-radius: 5px;
+    color: rgb(73, 0, 0);
+}
+.stopinput:hover{
+    background-color: rgb(73, 0, 0);;
+    color: rgb(253, 205, 239);
+    cursor: pointer;
+}
+.change_color{
+    position: absolute;
+    height: 20%;
+    border: 1px solid black;
+    border-radius: 12px;
+    width: 20%;
+    background-color: rgba(35, 165, 57, 0.712);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#c_color{
+    height: 22%;
+    width: 30%;
+}
+.change_color h2{
+    color: rgb(59, 20, 20);
+    margin-bottom: 15px;
+    font-size: 2.0rem;
+}
+.color-btn{
+    padding: 5px 8px;
+    margin-top: 20px;
+    font-size: 1.1rem;
+    border: 1px solid rgb(155, 53, 42);
+    border-radius: 6px;
+    background-color: rgb(216, 160, 238);
+}
+.color-btn:hover{
+    cursor: pointer;
+    background-color: rgb(232, 181, 252);
+    border: 1px solid black;
+}
+.set_time-btn{
+    padding: 5px 8px;
+    margin-top: 20px;
+    font-size: 1.1rem;
+    border: 1px solid rgb(155, 53, 42);
+    border-radius: 6px;
+    background-color: rgb(216, 160, 238);
+}
+.set_time-btn:hover{
+    cursor: pointer;
+    background-color: rgb(232, 181, 252);
+    border: 1px solid black;
+}
+.set_time{
+    border: 2px solid green;
+    border-radius: 5px;
+    text-align: center;
+    height: 30px;
+    width: 13%;
+    margin: 2px 2px;
+    font-size: 1.3rem;
+}
+.set_timezone-btn{
+    padding: 5px 8px;
+    margin-top: 20px;
+    font-size: 1.1rem;
+    border: 1px solid rgb(155, 53, 42);
+    border-radius: 6px;
+    background-color: rgb(216, 160, 238);
+}
+.set_timezone-btn:hover{
+    cursor: pointer;
+    background-color: rgb(232, 181, 252);
+    border: 1px solid black;
+}
+.tz_list{
+    height: 16vh;
+    overflow: auto;
+}
+.tz_list div{
+    font-size: 1.4rem;
+    padding: 3px 0px;
+}
+.tz_list div:hover{
+    background-color: rgb(130, 243, 205);
+    cursor: pointer;
+}
+.tz_list div:focus{
+    background-color: rgb(130, 243, 205);
+    cursor: pointer;
+}
